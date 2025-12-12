@@ -24,14 +24,6 @@
                 <input type="text" id="questionSearch" placeholder="Search questions...">
             </div>
             <div class="navbar-links">
-                <a href="index.html" class="nav-item">
-                    <i class="fas fa-code"></i>
-                    <span>Commands</span>
-                </a>
-                <a href="interview.html" class="nav-item">
-                    <i class="fas fa-question-circle"></i>
-                    <span>Interview</span>
-                </a>
                 <a href="index.html#basic" class="nav-item" data-section="basic">
                     <i class="fas fa-rocket"></i>
                     <span>Basic</span>
@@ -51,10 +43,6 @@
                 <a href="index.html#undo" class="nav-item" data-section="undo">
                     <i class="fas fa-undo"></i>
                     <span>Undo</span>
-                </a>
-                <a href="index.html#remote" class="nav-item" data-section="remote">
-                    <i class="fas fa-cloud"></i>
-                    <span>Remote</span>
                 </a>
             </div>
         </div>
@@ -149,6 +137,29 @@
 
     <!-- Main Content -->
     <main class="main-content">
+        <!-- Section Navigation Bar -->
+        <nav class="section-nav">
+            <a href="index.html#basic" class="section-nav-item">
+                <i class="fas fa-rocket"></i>
+                <span>Basic</span>
+            </a>
+            <a href="index.html#branching" class="section-nav-item">
+                <i class="fas fa-code-branch"></i>
+                <span>Branching</span>
+            </a>
+            <a href="index.html#merging" class="section-nav-item">
+                <i class="fas fa-project-diagram"></i>
+                <span>Merging</span>
+            </a>
+            <a href="index.html#history" class="section-nav-item">
+                <i class="fas fa-history"></i>
+                <span>History</span>
+            </a>
+            <a href="index.html#undo" class="section-nav-item">
+                <i class="fas fa-undo"></i>
+                <span>Undo</span>
+            </a>
+        </nav>
 
         <!-- Topic 1: Git Basics -->
         <section id="basics" class="command-section">
@@ -157,7 +168,7 @@
                     <i class="fas fa-rocket"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 1: Git Basics</h2>
+                    <h2 class="section-title">Git Basics</h2>
                     <p class="section-subtitle">fundamentals (Google, Amazon, Microsoft)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -333,7 +344,7 @@
                     <i class="fas fa-code-branch"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 2: Branching & Merging</h2>
+                    <h2 class="section-title">Branching & Merging</h2>
                     <p class="section-subtitle">branch management (Google, Amazon, Microsoft, startups)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -509,7 +520,7 @@
                     <i class="fas fa-history"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 3: History & Logging</h2>
+                    <h2 class="section-title">History & Logging</h2>
                     <p class="section-subtitle">commit inspection (Google, Microsoft)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -685,7 +696,7 @@
                     <i class="fas fa-cloud"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 4: Remotes & Collaboration</h2>
+                    <h2 class="section-title">Remotes & Collaboration</h2>
                     <p class="section-subtitle">push, pull, fetch (Amazon, Microsoft, Google, startups)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -861,7 +872,7 @@
                     <i class="fas fa-archive"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 5: Stash & Working Directory</h2>
+                    <h2 class="section-title">Stash & Working Directory</h2>
                     <p class="section-subtitle">temporary saves (Microsoft, startups)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -1037,7 +1048,7 @@
                     <i class="fas fa-file-code"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 6: Diff & Blame</h2>
+                    <h2 class="section-title">Diff & Blame</h2>
                     <p class="section-subtitle">code inspection (Google, Microsoft)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -1213,7 +1224,7 @@
                     <i class="fas fa-undo"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 7: Undo & Reset</h2>
+                    <h2 class="section-title">Undo & Reset</h2>
                     <p class="section-subtitle">reverting changes (Amazon, Google, Microsoft)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -1389,7 +1400,7 @@
                     <i class="fas fa-sitemap"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 8: Workflows & Best Practices</h2>
+                    <h2 class="section-title">Workflows & Best Practices</h2>
                     <p class="section-subtitle">Gitflow, trunk-based (Netflix, Amazon, Google)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -1565,7 +1576,7 @@
                     <i class="fas fa-cogs"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 9: Advanced Git</h2>
+                    <h2 class="section-title">Advanced Git</h2>
                     <p class="section-subtitle">internals, hooks, customization (Google, Microsoft)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -1741,7 +1752,7 @@
                     <i class="fas fa-github"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 10: GitHub/GitLab Features</h2>
+                    <h2 class="section-title">GitHub/GitLab Features</h2>
                     <p class="section-subtitle">PRs, protected branches, CI (GitHub, GitLab)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -1917,7 +1928,7 @@
                     <i class="fas fa-tools"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 11: Troubleshooting & Recovery</h2>
+                    <h2 class="section-title">Troubleshooting & Recovery</h2>
                     <p class="section-subtitle">fixing mistakes (all companies)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -2093,7 +2104,7 @@
                     <i class="fas fa-sliders-h"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 12: Configuration & Customization</h2>
+                    <h2 class="section-title">Configuration & Customization</h2>
                     <p class="section-subtitle">settings, aliases, hooks (all companies)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
@@ -2269,7 +2280,7 @@
                     <i class="fas fa-microscope"></i>
                 </div>
                 <div class="section-info">
-                    <h2 class="section-title">Topic 13: Git Internals</h2>
+                    <h2 class="section-title">Git Internals</h2>
                     <p class="section-subtitle">objects, refs, hashing, packfiles (Google, Microsoft)</p>
                 </div>
                 <div class="section-count">10 Questions</div>
