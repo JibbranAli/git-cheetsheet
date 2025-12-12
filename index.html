@@ -12,123 +12,138 @@
 </head>
 
 <body>
-    <!-- Main Layout Container -->
-    <div class="app-layout">
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-inner">
-                <!-- Profile Section -->
-                <div class="profile-section">
-                    <div class="profile-image-container">
-                        <img src="assets/profile.png" alt="Jibbran Ali">
-                        <div class="status-dot"></div>
-                    </div>
-                    <h2 class="profile-name">Jibbran Ali</h2>
-                    <p class="profile-role">Git Expert & Developer</p>
-                    <div class="social-links">
-                        <a href="https://github.com/JibbranAli" target="_blank" class="social-link github">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" class="social-link linkedin">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Search -->
-                <div class="search-section">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="globalSearch" placeholder="Search commands...">
-                    </div>
-                </div>
-
-                <!-- Navigation -->
-                <nav class="navigation">
-                    <div class="nav-label">Navigation</div>
-                    <a href="#basic" class="nav-link" data-section="basic">
-                        <i class="fas fa-rocket"></i>
-                        <span>Basic Commands</span>
-                    </a>
-                    <a href="#branching" class="nav-link" data-section="branching">
-                        <i class="fas fa-code-branch"></i>
-                        <span>Branching</span>
-                    </a>
-                    <a href="#merging" class="nav-link" data-section="merging">
-                        <i class="fas fa-project-diagram"></i>
-                        <span>Merging</span>
-                    </a>
-                    <a href="#history" class="nav-link" data-section="history">
-                        <i class="fas fa-history"></i>
-                        <span>History</span>
-                    </a>
-                    <a href="#undo" class="nav-link" data-section="undo">
-                        <i class="fas fa-undo"></i>
-                        <span>Undoing Work</span>
-                    </a>
-                    <a href="#remote" class="nav-link" data-section="remote">
-                        <i class="fas fa-cloud"></i>
-                        <span>Remote</span>
-                    </a>
-                </nav>
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <i class="fab fa-git-alt"></i>
+                <span>Git Commands Cheat Sheet</span>
             </div>
-        </aside>
+            <div class="navbar-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="globalSearch" placeholder="Search commands...">
+            </div>
+            <div class="navbar-links">
+                <a href="#basic" class="nav-item" data-section="basic">
+                    <i class="fas fa-rocket"></i>
+                    <span>Basic</span>
+                </a>
+                <a href="#branching" class="nav-item" data-section="branching">
+                    <i class="fas fa-code-branch"></i>
+                    <span>Branching</span>
+                </a>
+                <a href="#merging" class="nav-item" data-section="merging">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Merging</span>
+                </a>
+                <a href="#history" class="nav-item" data-section="history">
+                    <i class="fas fa-history"></i>
+                    <span>History</span>
+                </a>
+                <a href="#undo" class="nav-item" data-section="undo">
+                    <i class="fas fa-undo"></i>
+                    <span>Undo</span>
+                </a>
+                <a href="#remote" class="nav-item" data-section="remote">
+                    <i class="fas fa-cloud"></i>
+                    <span>Remote</span>
+                </a>
+            </div>
+        </div>
+    </nav>
 
-        <!-- Main Content Area -->
-        <main class="main-content-area">
-            <!-- Page Header -->
-            <header class="page-header">
-                <div class="header-top">
-                    <div class="header-badge">
-                        <i class="fas fa-book"></i>
-                        <span>Complete Git Commands Cheat Sheet</span>
-                    </div>
+    <!-- Hero Section with Profile Table -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+            <div class="gradient-blob blob-3"></div>
+        </div>
+        <div class="hero-container">
+            <!-- Profile Table -->
+            <div class="profile-table-container">
+                <table class="profile-table">
+                    <tr>
+                        <td class="profile-image-cell">
+                            <div class="profile-img-wrapper">
+                                <img src="assets/profile.png" alt="Jibbran Ali">
+                                <div class="status-indicator"></div>
+                            </div>
+                        </td>
+                        <td class="profile-info-cell">
+                            <div class="profile-details">
+                                <h2 class="profile-name">Jibbran Ali</h2>
+                                <p class="profile-title">Git Expert & Developer</p>
+                            </div>
+                        </td>
+                        <td class="profile-social-cell">
+                            <div class="social-buttons">
+                                <a href="https://github.com/JibbranAli" target="_blank" class="social-btn github-btn">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" class="social-btn linkedin-btn">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-book"></i>
+                    <span>Complete Git Commands Cheat Sheet</span>
                 </div>
-                <div class="header-main">
-                    <h1 class="page-title">
-                        Git Commands
-                        <span class="title-gradient">Cheat Sheet</span>
-                    </h1>
-                    <p class="page-subtitle">
-                        Your ultimate quick reference guide for Git commands. Find what you need instantly with 
-                        visual infographics, clear explanations, and copy-ready code snippets.
-                    </p>
-                </div>
-                <div class="header-stats">
-                    <div class="stat-box">
-                        <div class="stat-icon-box">
+                <h1 class="hero-title">
+                    Git Commands
+                    <span class="title-gradient">Cheat Sheet</span>
+                </h1>
+                <p class="hero-description">
+                    Your ultimate quick reference guide for Git commands. Find what you need instantly with 
+                    visual infographics, clear explanations, and copy-ready code snippets.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <div class="stat-content">
+                        <div class="stat-info">
                             <div class="stat-number">50+</div>
                             <div class="stat-label">Commands</div>
                         </div>
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-icon-box">
+                    <div class="stat-card">
+                        <div class="stat-icon">
                             <i class="fas fa-book-open"></i>
                         </div>
-                        <div class="stat-content">
+                        <div class="stat-info">
                             <div class="stat-number">100%</div>
                             <div class="stat-label">Explained</div>
                         </div>
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-icon-box">
+                    <div class="stat-card">
+                        <div class="stat-icon">
                             <i class="fas fa-rocket"></i>
                         </div>
-                        <div class="stat-content">
+                        <div class="stat-info">
                             <div class="stat-number">∞</div>
                             <div class="stat-label">Examples</div>
                         </div>
                     </div>
                 </div>
-            </header>
+            </div>
+        </div>
+    </section>
 
-            <!-- Commands Content -->
-            <div class="content-wrapper">
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Commands Content -->
+        <div class="content-wrapper">
                 <!-- Basic Commands -->
                 <section id="basic" class="command-section">
                     <div class="section-header">
@@ -745,12 +760,11 @@ git clone URL folder-name</code></pre>
                         </div>
                     </div>
                 </section>
-            </div>
-        </main>
-    </div>
+        </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="page-footer">
+    <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-brand">
                 <i class="fab fa-git-alt"></i>
