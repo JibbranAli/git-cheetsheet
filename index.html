@@ -1,73 +1,962 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Git Commands Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commands Guide - Master Git Like a Pro 🚀</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
-<div class="container">
-
-    <div class="sidebar">
-        <img src="assets/profile.png" alt="Profile">
-        <h2>Jibbran Ali</h2>
-        <a href="https://github.com/JibbranAli" target="_blank">GitHub Profile</a>
-        <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank">LinkedIn</a>
-
-        <hr style="border-color:#333; margin:20px 0;">
-
-        <h3>Documentation</h3>
-        <a href="#basic">Basic Commands</a>
-        <a href="#branching">Branching</a>
-        <a href="#merging">Merging</a>
-        <a href="#history">History</a>
-        <a href="#undo">Undoing Work</a>
-        <a href="#remote">Remote Work</a>
-        <a href="#maintenance">Maintenance</a>
-        <a href="#advanced">Advanced Git</a>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
     </div>
 
-    <div class="content">
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-image-wrapper">
+                    <img src="assets/profile.png" alt="Jibbran Ali">
+                    <div class="status-indicator"></div>
+                </div>
+                <h2>Jibbran Ali</h2>
+                <p class="profile-subtitle">Git Expert & Developer</p>
+                <div class="social-buttons">
+                    <a href="https://github.com/JibbranAli" target="_blank" class="social-btn github" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
 
-        <h1>Git Commands Documentation</h1>
-        <p>A complete, professionally structured Git command reference website.</p>
+            <div class="nav-section">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search commands...">
+                </div>
+                <h3 class="nav-title">Quick Navigation</h3>
+                <nav class="nav-menu">
+                    <a href="#basic" class="nav-item" data-section="basic">
+                        <i class="fas fa-rocket"></i>
+                        <span>Basic Commands</span>
+                    </a>
+                    <a href="#branching" class="nav-item" data-section="branching">
+                        <i class="fas fa-code-branch"></i>
+                        <span>Branching</span>
+                    </a>
+                    <a href="#merging" class="nav-item" data-section="merging">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Merging</span>
+                    </a>
+                    <a href="#history" class="nav-item" data-section="history">
+                        <i class="fas fa-history"></i>
+                        <span>History</span>
+                    </a>
+                    <a href="#undo" class="nav-item" data-section="undo">
+                        <i class="fas fa-undo"></i>
+                        <span>Undoing Work</span>
+                    </a>
+                    <a href="#remote" class="nav-item" data-section="remote">
+                        <i class="fas fa-cloud"></i>
+                        <span>Remote Work</span>
+                    </a>
+                    <a href="#maintenance" class="nav-item" data-section="maintenance">
+                        <i class="fas fa-tools"></i>
+                        <span>Maintenance</span>
+                    </a>
+                    <a href="#advanced" class="nav-item" data-section="advanced">
+                        <i class="fas fa-bolt"></i>
+                        <span>Advanced Git</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
 
-        <h2 id="basic">Basic Commands</h2>
-        <pre><code>git init</code></pre>
-        <pre><code>git add .</code></pre>
-        <pre><code>git commit -m "Initial commit"</code></pre>
-        <pre><code>git status</code></pre>
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Hero Section -->
+            <header class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Master Git</span>
+                        <span class="title-accent">Commands</span>
+                    </h1>
+                    <p class="hero-description">
+                        The most comprehensive, beautifully designed Git command reference. Learn Git commands with detailed explanations, practical examples, and interactive code snippets. Perfect for students and developers! 🎓
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-code"></i>
+                            <span>50+ Commands</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-book"></i>
+                            <span>Detailed Explanations</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Real Examples</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-        <h2 id="branching">Branching</h2>
-        <pre><code>git branch feature-login</code></pre>
-        <pre><code>git switch feature-login</code></pre>
+            <!-- Basic Commands Section -->
+            <section id="basic" class="command-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Basic Commands</h2>
+                        <p class="section-subtitle">Essential Git commands to get you started with version control</p>
+                    </div>
+                </div>
 
-        <h2 id="merging">Merging</h2>
-        <pre><code>git merge feature</code></pre>
-        <pre><code>git merge --squash feature</code></pre>
+                <div class="command-grid">
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git init</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Initializes a new Git repository in the current directory. This creates a hidden <code>.git</code> folder that contains all repository metadata, history, and configuration files.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git init</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Navigate to your project folder and run <code>git init</code> to start tracking changes.
+                            </div>
+                        </div>
+                    </div>
 
-        <h2 id="history">History</h2>
-        <pre><code>git log --oneline --graph --decorate --all</code></pre>
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git add</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Stages files for the next commit. You can add specific files, directories, or use <code>.</code> to add all changes. Staging allows you to selectively choose what goes into your commit.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git add .                    # Add all changes
+git add file.txt            # Add specific file
+git add src/                # Add entire directory
+git add -A                  # Add all changes including deletions</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> After modifying files, use <code>git add .</code> to stage all changes before committing.
+                            </div>
+                        </div>
+                    </div>
 
-        <h2 id="undo">Undoing Work</h2>
-        <pre><code>git reset --hard HEAD~1</code></pre>
-        <pre><code>git revert &lt;commit&gt;</code></pre>
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git commit</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Creates a snapshot of your staged changes with a descriptive message. Each commit has a unique hash and represents a point in your project's history that you can return to.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git commit -m "Initial commit"
+git commit -m "Add user authentication"
+git commit -am "Quick commit"  # Add and commit tracked files
+git commit --amend             # Modify the last commit</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> <code>git commit -m "Fix login bug"</code> saves your staged changes with a clear message describing what was fixed.
+                            </div>
+                        </div>
+                    </div>
 
-        <h2 id="remote">Remote</h2>
-        <pre><code>git push origin main</code></pre>
-        <pre><code>git fetch</code></pre>
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git status</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Shows the current state of your working directory and staging area. It displays which files are modified, staged, or untracked, helping you understand what changes are ready to commit.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git status
+git status -s                # Short format
+git status --short           # Same as -s</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Run <code>git status</code> to see if you have uncommitted changes or files that need to be staged.
+                            </div>
+                        </div>
+                    </div>
 
-        <h2 id="maintenance">Maintenance</h2>
-        <pre><code>git gc --aggressive</code></pre>
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git diff</code>
+                            <span class="badge badge-useful">Useful</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Shows the differences between your working directory and the staging area, or between commits. Essential for reviewing changes before committing.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git diff                     # Unstaged changes
+git diff --staged            # Staged changes
+git diff HEAD                # All changes (staged + unstaged)
+git diff commit1 commit2     # Compare two commits</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Use <code>git diff</code> to see exactly what lines were changed in your files before committing.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <h2 id="advanced">Advanced Git</h2>
-        <pre><code>git rebase main</code></pre>
-        <pre><code>git cherry-pick &lt;commit&gt;</code></pre>
+            <!-- Branching Section -->
+            <section id="branching" class="command-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Branching</h2>
+                        <p class="section-subtitle">Create isolated environments for features, experiments, and bug fixes</p>
+                    </div>
+                </div>
 
+                <div class="command-grid">
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git branch</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Lists all branches or creates a new branch. Branches allow you to work on features independently without affecting the main codebase.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git branch                    # List all branches
+git branch feature-login     # Create new branch
+git branch -d feature-login  # Delete merged branch
+git branch -D feature-login  # Force delete branch</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Create a feature branch with <code>git branch feature-login</code>, then switch to it to start working on login functionality.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git switch</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Switches to another branch. This is the modern way to change branches (replaces <code>git checkout</code> for branch switching). Your working directory updates to match the branch you switch to.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git switch main              # Switch to main branch
+git switch feature-login     # Switch to feature branch
+git switch -c new-feature    # Create and switch to new branch
+git switch -                 # Switch to previous branch</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Use <code>git switch feature-login</code> to move from main to your feature branch and start coding.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Merging Section -->
+            <section id="merging" class="command-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Merging</h2>
+                        <p class="section-subtitle">Combine changes from different branches into one unified history</p>
+                    </div>
+                </div>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git merge</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Combines changes from one branch into another. Creates a merge commit that ties together the histories of both branches. Essential for integrating feature work back into main.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git merge feature-login      # Fast-forward or merge commit
+git merge --no-ff feature    # Always create merge commit
+git merge --squash feature   # Squash all commits into one
+git merge --abort            # Cancel merge in progress</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Switch to main with <code>git switch main</code>, then run <code>git merge feature-login</code> to integrate your feature.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card warning-card">
+                        <div class="card-header">
+                            <code class="command-name">Merge Conflicts</code>
+                            <span class="badge badge-warning">Important</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            When Git can't automatically merge changes, you'll need to resolve conflicts manually. Git marks conflict areas in files, and you choose which changes to keep.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code># After merge conflict appears:
+git status                   # See conflicted files
+# Edit files to resolve conflicts
+git add .                    # Mark conflicts as resolved
+git commit                   # Complete the merge</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> If both branches modified the same line, Git will mark it with conflict markers. Edit the file to keep desired changes, then stage and commit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History Section -->
+            <section id="history" class="command-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">History & Inspection</h2>
+                        <p class="section-subtitle">Explore your repository's commit history and understand what changed</p>
+                    </div>
+                </div>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git log</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Displays the commit history. With various flags, you can see a visual graph, filter by author, date, or search commit messages. Essential for understanding project evolution.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git log                      # Full history
+git log --oneline            # Compact one-line format
+git log --graph --decorate --all  # Visual branch graph
+git log -5                   # Last 5 commits
+git log --author="John"      # Filter by author</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> <code>git log --oneline --graph --all</code> shows a beautiful visual representation of all branches and their relationships.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git show</code>
+                            <span class="badge badge-useful">Useful</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Shows detailed information about a specific commit, including the full diff of what changed. Perfect for reviewing what a commit did.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git show                     # Show latest commit
+git show HEAD                # Show latest commit
+git show abc1234             # Show specific commit
+git show HEAD~1              # Show previous commit</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Use <code>git show abc1234</code> to see exactly what files and lines were changed in that specific commit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Undoing Work Section -->
+            <section id="undo" class="command-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Undoing Work</h2>
+                        <p class="section-subtitle">Safely undo changes, commits, and mistakes with Git's powerful undo capabilities</p>
+                    </div>
+                </div>
+
+                <div class="command-grid">
+                    <div class="command-card danger-card">
+                        <div class="card-header">
+                            <code class="command-name">git reset</code>
+                            <span class="badge badge-danger">Use with Caution</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-exclamation-circle"></i>
+                            Moves the branch pointer backward, effectively "undoing" commits. Different modes determine what happens to your working directory and staging area. <strong>Warning:</strong> Can lose work if not careful.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git reset --soft HEAD~1      # Undo commit, keep changes staged
+git reset --mixed HEAD~1     # Undo commit, keep changes unstaged
+git reset --hard HEAD~1      # Undo commit, discard all changes ⚠️</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> <code>git reset --soft HEAD~1</code> undoes the last commit but keeps your changes staged, so you can fix the commit message and recommit.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git revert</code>
+                            <span class="badge badge-safe">Safe</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Creates a new commit that undoes the changes from a previous commit. This is the safe way to undo commits that have already been pushed to a shared repository, as it doesn't rewrite history.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git revert HEAD              # Revert last commit
+git revert abc1234           # Revert specific commit
+git revert --no-commit abc1234  # Revert without committing</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> If you pushed a buggy commit, use <code>git revert abc1234</code> to create a new commit that fixes it, without rewriting history.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git stash</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Temporarily saves your uncommitted changes so you can switch branches or pull updates with a clean working directory. Your changes are stored and can be reapplied later.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git stash                    # Save changes temporarily
+git stash save "message"     # Stash with message
+git stash list               # List all stashes
+git stash pop                # Apply and remove latest stash
+git stash apply              # Apply but keep stash</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Working on a feature but need to switch branches? Run <code>git stash</code>, switch branches, then <code>git stash pop</code> to restore your work.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Remote Work Section -->
+            <section id="remote" class="command-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Remote Repositories</h2>
+                        <p class="section-subtitle">Work with remote repositories like GitHub, GitLab, or Bitbucket</p>
+                    </div>
+                </div>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git remote</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Manages connections to remote repositories. Shows, adds, or removes remote URLs where you push and pull code from.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git remote -v                # List all remotes with URLs
+git remote add origin URL    # Add a remote named 'origin'
+git remote remove origin     # Remove a remote
+git remote set-url origin NEW_URL  # Change remote URL</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> After creating a GitHub repo, use <code>git remote add origin https://github.com/user/repo.git</code> to connect your local repo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git push</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Uploads your local commits to a remote repository. This is how you share your work with others or back it up to services like GitHub.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git push origin main         # Push main branch to origin
+git push origin feature      # Push feature branch
+git push -u origin main      # Push and set upstream (first time)
+git push --all               # Push all branches</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> After committing locally, use <code>git push origin main</code> to upload your changes to GitHub for others to see.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git pull</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Fetches changes from remote and immediately merges them into your current branch. Equivalent to <code>git fetch</code> followed by <code>git merge</code>.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git pull                     # Fetch and merge from default remote
+git pull origin main         # Pull from specific remote/branch
+git pull --rebase            # Pull and rebase instead of merge</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> <code>git pull</code> downloads the latest changes from GitHub and merges them into your current branch, keeping you up to date.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git clone</code>
+                            <span class="badge badge-essential">Essential</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Creates a copy of a remote repository on your local machine. This is how you get started with an existing project from GitHub or other Git hosting services.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git clone URL                # Clone repository
+git clone URL folder-name    # Clone into specific folder
+git clone --depth 1 URL      # Shallow clone (faster, less history)</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> <code>git clone https://github.com/user/repo.git</code> downloads the entire project and sets up the remote connection automatically.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Maintenance Section -->
+            <section id="maintenance" class="command-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Repository Maintenance</h2>
+                        <p class="section-subtitle">Keep your repository clean, optimized, and healthy</p>
+                    </div>
+                </div>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <div class="card-header">
+                            <code class="command-name">git gc</code>
+                            <span class="badge badge-maintenance">Maintenance</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Garbage collection - optimizes your repository by compressing files and removing unreachable objects. Helps reduce repository size and improve performance.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git gc                       # Standard garbage collection
+git gc --aggressive          # More thorough optimization
+git gc --prune=now           # Remove unreachable objects immediately</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Run <code>git gc --aggressive</code> periodically on large repositories to optimize storage and improve Git performance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advanced Git Section -->
+            <section id="advanced" class="command-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Advanced Git</h2>
+                        <p class="section-subtitle">Powerful features for experienced users and complex workflows</p>
+                    </div>
+                </div>
+
+                <div class="command-grid">
+                    <div class="command-card advanced-card">
+                        <div class="card-header">
+                            <code class="command-name">git rebase</code>
+                            <span class="badge badge-advanced">Advanced</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Rewrites commit history by replaying commits from one branch onto another. Creates a linear history but rewrites commits, so use carefully on shared branches.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git rebase main              # Rebase current branch onto main
+git rebase -i HEAD~3         # Interactive rebase (last 3 commits)
+git rebase --abort           # Cancel rebase in progress
+git rebase --continue        # Continue after resolving conflicts</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> <code>git rebase main</code> takes your feature branch commits and replays them on top of the latest main, creating a cleaner linear history.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-card advanced-card">
+                        <div class="card-header">
+                            <code class="command-name">git cherry-pick</code>
+                            <span class="badge badge-advanced">Advanced</span>
+                        </div>
+                        <p class="command-description">
+                            <i class="fas fa-info-circle"></i>
+                            Applies a specific commit from one branch to another. Useful for porting bug fixes or features between branches without merging entire branches.
+                        </p>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>Command</span>
+                                <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code>git cherry-pick abc1234      # Apply specific commit
+git cherry-pick -x abc1234   # Include original commit hash
+git cherry-pick main..feature # Pick range of commits</code></pre>
+                        </div>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Example:</strong> Found a bug fix in the main branch? Use <code>git cherry-pick abc1234</code> to apply just that commit to your feature branch.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>Made with <i class="fas fa-heart"></i> by <strong>Jibbran Ali</strong></p>
+                    <p class="footer-subtitle">Helping students master Git, one command at a time</p>
+                    <div class="footer-links">
+                        <a href="https://github.com/JibbranAli" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </main>
     </div>
-</div>
 
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Copied to clipboard!</span>
+    </div>
+
+    <script>
+        // Copy to clipboard functionality
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-container').querySelector('code');
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                showToast();
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-copy"></i>';
+                }, 2000);
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const commandCards = document.querySelectorAll('.command-card');
+        const sections = document.querySelectorAll('.command-section');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            commandCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.classList.add('search-highlight');
+                } else {
+                    card.style.display = searchTerm === '' ? 'block' : 'none';
+                    card.classList.remove('search-highlight');
+                }
+            });
+
+            // Show/hide sections based on visible cards
+            sections.forEach(section => {
+                const visibleCards = Array.from(section.querySelectorAll('.command-card'))
+                    .filter(card => card.style.display !== 'none');
+                section.style.display = visibleCards.length > 0 || searchTerm === '' ? 'block' : 'none';
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        const navItems = document.querySelectorAll('.nav-item');
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === `#${sectionId}`) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Add animation on scroll
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        commandCards.forEach(card => cardObserver.observe(card));
+    </script>
 </body>
 </html>
