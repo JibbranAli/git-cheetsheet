@@ -1,9 +1,8 @@
 title: Git Commands Guide
-description: Comprehensive Git documentation created by Jibbran Ali
-theme: minima
-markdown: kramdown
+description: Professional Git documentation by Jibbran Ali
 
-# GitHub Pages configuration
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+markdown: kramdown
+theme: null
+
+exclude:
+  - README.md

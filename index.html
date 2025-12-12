@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Git Commands Guide</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <img src="assets/profile.png" alt="Profile">
+        <h2>Jibbran Ali</h2>
+        <a href="https://github.com/JibbranAli" target="_blank">GitHub Profile</a>
+        <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank">LinkedIn</a>
+
+        <hr style="border-color:#333; margin:20px 0;">
+
+        <h3>Documentation</h3>
+        <a href="#basic">Basic Commands</a>
+        <a href="#branching">Branching</a>
+        <a href="#merging">Merging</a>
+        <a href="#history">History</a>
+        <a href="#undo">Undoing Work</a>
+        <a href="#remote">Remote Work</a>
+        <a href="#maintenance">Maintenance</a>
+        <a href="#advanced">Advanced Git</a>
+    </div>
+
+    <div class="content">
+
+        <h1>Git Commands Documentation</h1>
+        <p>A complete, professionally structured Git command reference website.</p>
+
+        <h2 id="basic">Basic Commands</h2>
+        <pre><code>git init</code></pre>
+        <pre><code>git add .</code></pre>
+        <pre><code>git commit -m "Initial commit"</code></pre>
+        <pre><code>git status</code></pre>
+
+        <h2 id="branching">Branching</h2>
+        <pre><code>git branch feature-login</code></pre>
+        <pre><code>git switch feature-login</code></pre>
+
+        <h2 id="merging">Merging</h2>
+        <pre><code>git merge feature</code></pre>
+        <pre><code>git merge --squash feature</code></pre>
+
+        <h2 id="history">History</h2>
+        <pre><code>git log --oneline --graph --decorate --all</code></pre>
+
+        <h2 id="undo">Undoing Work</h2>
+        <pre><code>git reset --hard HEAD~1</code></pre>
+        <pre><code>git revert &lt;commit&gt;</code></pre>
+
+        <h2 id="remote">Remote</h2>
+        <pre><code>git push origin main</code></pre>
+        <pre><code>git fetch</code></pre>
+
+        <h2 id="maintenance">Maintenance</h2>
+        <pre><code>git gc --aggressive</code></pre>
+
+        <h2 id="advanced">Advanced Git</h2>
+        <pre><code>git rebase main</code></pre>
+        <pre><code>git cherry-pick &lt;commit&gt;</code></pre>
+
+    </div>
+</div>
+
+</body>
+</html>
